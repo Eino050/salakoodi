@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Salakoodi</title>
+  <meta name="description" content="Salaa ja pura tekstiä salakoodeilla">
+  <meta name="theme-color" content="#171736">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Salakoodi">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="icon" href="./icons/icon-192.png" type="image/png">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="app-header">
+    <svg class="header-icon" viewBox="0 0 512 512" aria-hidden="true">
+      <circle cx="256" cy="240" r="100" fill="none" stroke="#ffc93c" stroke-width="76" stroke-dasharray="314 314" stroke-dashoffset="120"/>
+      <rect x="140" y="230" width="232" height="170" rx="36" fill="#ffc93c"/>
+      <circle cx="256" cy="292" r="24" fill="#171736"/>
+      <rect x="244" y="292" width="24" height="60" rx="10" fill="#171736"/>
+    </svg>
+    <h1>Salakoodi</h1>
+  </header>
+
+  <main>
+    <div class="tabs" role="tablist">
+      <button class="tab active" id="tab-encrypt" role="tab" aria-selected="true">Salaa</button>
+      <button class="tab" id="tab-decrypt" role="tab" aria-selected="false">Pura</button>
+    </div>
+
+    <section id="panel-encrypt" class="panel">
+      <label for="input-encrypt">Kirjoita salattava teksti</label>
+      <textarea id="input-encrypt" placeholder="Esimerkiksi: Hei maailma" rows="4"></textarea>
+      <button id="btn-encrypt" class="primary">Salaa</button>
+      <div class="output hidden" data-owner="encrypt">
+        <label>Salakoodi</label>
+        <div id="output-encrypt" class="result"></div>
+        <button id="btn-copy-encrypt" class="secondary">Kopioi</button>
+      </div>
+    </section>
+
+    <section id="panel-decrypt" class="panel hidden">
+      <label for="input-decrypt">Kirjoita salakoodi</label>
+      <textarea id="input-decrypt" placeholder="Pastea salakoodi tähän" rows="4"></textarea>
+      <button id="btn-decrypt" class="primary">Pura</button>
+      <div class="output hidden" data-owner="decrypt">
+        <label>Puretettu teksti</label>
+        <div id="output-decrypt" class="result"></div>
+        <button id="btn-copy-decrypt" class="secondary">Kopioi</button>
+      </div>
+    </section>
+
+    <p class="hint">Tuntemattomat merkit jäävät hakasulkuihin, esim. [@].</p>
+  </main>
+
+  <footer class="app-footer">
+    <button id="btn-share" class="ghost">Jaa salakoodi</button>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
