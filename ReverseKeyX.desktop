@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=ReverseKeyX
+GenericName=Salakoodisovellus
+Comment=Salaa ja pura tekstiä
+Exec=xdg-open https://eino050.github.io/salakoodi/
+Terminal=false
+Categories=Utility;

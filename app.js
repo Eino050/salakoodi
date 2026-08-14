@@ -166,6 +166,33 @@
     });
   }
 
+  var btnApk = document.getElementById("btn-apk");
+  var dlSheet = document.getElementById("dl-sheet");
+  var btnSheetClose = document.getElementById("btn-sheet-close");
+
+  function openSheet() {
+    dlSheet.classList.remove("hidden");
+    btnApk.setAttribute("aria-expanded", "true");
+  }
+
+  function closeSheet() {
+    dlSheet.classList.add("hidden");
+    btnApk.setAttribute("aria-expanded", "false");
+  }
+
+  btnApk.addEventListener("click", openSheet);
+  btnSheetClose.addEventListener("click", closeSheet);
+  dlSheet.addEventListener("click", function (event) {
+    if (event.target === dlSheet) {
+      closeSheet();
+    }
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeSheet();
+    }
+  });
+
   document.getElementById("btn-share").addEventListener("click", function () {
     var output = document.getElementById("output-encrypt");
     var text = output.textContent;
