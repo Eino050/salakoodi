@@ -59,8 +59,28 @@
 
   <footer class="app-footer">
     <button id="btn-share" class="ghost">Jaa salakoodi</button>
-    <a class="apk-link" href="./salakoodi.apk" download>Android-sovellus (APK) &darr;</a>
   </footer>
+
+  <button id="btn-apk" class="apk-fab" aria-label="Lataa Android-sovellus">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 16V4M6 10l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M4 20h16" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+    </svg>
+  </button>
+
+  <div id="apk-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-label="Lataa Android-sovellus">
+    <div class="modal">
+      <button id="btn-apk-close" class="modal-close" aria-label="Sulje">&times;</button>
+      <h2>Android-sovellus</h2>
+      <p>Lataa Salakoodi APK-tiedostona ja asenna se puhelimeesi.</p>
+      <a class="modal-download" href="./salakoodi.apk" download>Lataa salakoodi.apk</a>
+      <ol class="modal-steps">
+        <li>Paina lataa-painiketta.</li>
+        <li>Kun lataus on valmis, avaa <strong>salakoodi.apk</strong>-tiedosto.</li>
+        <li>Vahvista asennus. Jos selain kysyy, salli tuntemattomien lähteiden asennus.</li>
+      </ol>
+    </div>
+  </div>
 
   <script src="./app.js"></script>
 </body>

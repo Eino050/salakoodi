@@ -166,6 +166,22 @@
     });
   }
 
+  var btnApk = document.getElementById("btn-apk");
+  var apkModal = document.getElementById("apk-modal");
+  var btnApkClose = document.getElementById("btn-apk-close");
+
+  btnApk.addEventListener("click", function () {
+    apkModal.classList.remove("hidden");
+  });
+  btnApkClose.addEventListener("click", function () {
+    apkModal.classList.add("hidden");
+  });
+  apkModal.addEventListener("click", function (event) {
+    if (event.target === apkModal) {
+      apkModal.classList.add("hidden");
+    }
+  });
+
   document.getElementById("btn-share").addEventListener("click", function () {
     var output = document.getElementById("output-encrypt");
     var text = output.textContent;
