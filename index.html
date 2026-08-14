@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Salakoodi</title>
+  <title>ReverseKeyX</title>
   <meta name="description" content="Salaa ja pura tekstiä salakoodeilla">
-  <meta name="theme-color" content="#171736">
+  <meta name="theme-color" content="#050508">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Salakoodi">
+  <meta name="apple-mobile-web-app-title" content="ReverseKeyX">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="apple-touch-icon" href="./icons/icon-192.png">
   <link rel="icon" href="./icons/icon-192.png" type="image/png">
@@ -18,12 +18,18 @@
 <body>
   <header class="app-header">
     <svg class="header-icon" viewBox="0 0 512 512" aria-hidden="true">
-      <circle cx="256" cy="240" r="100" fill="none" stroke="#ffc93c" stroke-width="76" stroke-dasharray="314 314" stroke-dashoffset="120"/>
-      <rect x="140" y="230" width="232" height="170" rx="36" fill="#ffc93c"/>
-      <circle cx="256" cy="292" r="24" fill="#171736"/>
-      <rect x="244" y="292" width="24" height="60" rx="10" fill="#171736"/>
+      <defs>
+        <linearGradient id="lg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#00fff2"/>
+          <stop offset="1" stop-color="#ff2fd6"/>
+        </linearGradient>
+      </defs>
+      <circle cx="256" cy="240" r="100" fill="none" stroke="#00fff2" stroke-width="76" stroke-dasharray="314 314" stroke-dashoffset="120"/>
+      <rect x="140" y="230" width="232" height="170" rx="36" fill="url(#lg)"/>
+      <circle cx="256" cy="292" r="24" fill="#050508"/>
+      <rect x="244" y="292" width="24" height="60" rx="10" fill="#050508"/>
     </svg>
-    <h1>Salakoodi</h1>
+    <h1>ReverseKeyX</h1>
   </header>
 
   <main>

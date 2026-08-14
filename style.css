@@ -1,11 +1,14 @@
 :root {
-  --bg: #171736;
-  --bg-elev: #23234d;
-  --bg-input: #10102a;
-  --accent: #ffc93c;
-  --text: #f2f2fa;
-  --muted: #9a9ac4;
-  --danger: #ff6b6b;
+  --bg: #050508;
+  --bg-elev: #12121c;
+  --bg-input: #0a0a14;
+  --border: #26263e;
+  --accent: #00fff2;
+  --accent2: #ff2fd6;
+  --text: #eafcfb;
+  --muted: #8a8fb0;
+  --danger: #ff3b6b;
+  --glow: 0 0 14px rgba(0, 255, 242, 0.45);
   --radius: 16px;
 }
 
@@ -20,7 +23,10 @@ html, body {
 }
 
 body {
-  background: var(--bg);
+  background:
+    radial-gradient(1100px 480px at 50% -12%, rgba(255, 47, 214, 0.13), transparent 60%),
+    radial-gradient(900px 420px at 85% 0%, rgba(0, 255, 242, 0.10), transparent 55%),
+    var(--bg);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   display: flex;
@@ -40,12 +46,18 @@ body {
   width: 40px;
   height: 40px;
   flex: none;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 242, 0.6));
 }
 
 .app-header h1 {
   font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #00fff2, #ff2fd6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 242, 0.45));
 }
 
 main {
@@ -59,6 +71,7 @@ main {
 .tabs {
   display: flex;
   background: var(--bg-elev);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 4px;
   gap: 4px;
@@ -80,7 +93,8 @@ main {
 
 .tab.active {
   background: var(--accent);
-  color: var(--bg);
+  color: #050508;
+  box-shadow: var(--glow);
 }
 
 .panel.hidden {
@@ -97,7 +111,7 @@ label {
 textarea {
   width: 100%;
   background: var(--bg-input);
-  border: 1px solid #34346a;
+  border: 1px solid var(--border);
   color: var(--text);
   border-radius: var(--radius);
   padding: 14px;
@@ -111,6 +125,7 @@ textarea {
 textarea:focus {
   outline: none;
   border-color: var(--accent);
+  box-shadow: var(--glow);
 }
 
 button {
@@ -126,13 +141,15 @@ button {
 button.primary {
   width: 100%;
   background: var(--accent);
-  color: var(--bg);
+  color: #050508;
   margin-top: 12px;
+  box-shadow: var(--glow);
 }
 
 button.secondary {
   width: 100%;
   background: var(--bg-elev);
+  border: 1px solid var(--border);
   color: var(--text);
 }
 
@@ -156,7 +173,7 @@ button:active {
 
 .result {
   background: var(--bg-input);
-  border: 1px solid #34346a;
+  border: 1px solid rgba(0, 255, 242, 0.35);
   border-radius: var(--radius);
   padding: 14px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -165,6 +182,7 @@ button:active {
   line-height: 1.6;
   margin-bottom: 12px;
   user-select: text;
+  box-shadow: inset 0 0 20px rgba(0, 255, 242, 0.05);
 }
 
 .hint {
@@ -187,12 +205,12 @@ button:active {
   height: 56px;
   border-radius: 50%;
   background: var(--accent);
-  color: var(--bg);
+  color: #050508;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), var(--glow);
   z-index: 50;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;

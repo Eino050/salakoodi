@@ -1,13 +1,13 @@
 {
-  "name": "Salakoodi",
-  "short_name": "Salakoodi",
+  "name": "ReverseKeyX",
+  "short_name": "ReverseKeyX",
   "description": "Salaa ja pura tekstiä salakoodeilla",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#171736",
-  "theme_color": "#171736",
+  "background_color": "#050508",
+  "theme_color": "#050508",
   "lang": "fi",
   "icons": [
     {
