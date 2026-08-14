@@ -194,6 +194,8 @@ button:active {
   padding: 0;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
   z-index: 50;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .apk-fab svg {
@@ -201,72 +203,6 @@ button:active {
   height: 26px;
 }
 
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(10, 10, 25, 0.7);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  z-index: 100;
-}
-
-.modal-overlay.hidden {
-  display: none;
-}
-
-.modal {
-  background: var(--bg-elev);
-  border-radius: 20px 20px 0 0;
-  padding: 24px 20px calc(24px + env(safe-area-inset-bottom));
-  width: 100%;
-  max-width: 520px;
-  position: relative;
-}
-
-.modal h2 {
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-
-.modal p {
-  color: var(--muted);
-  font-size: 14px;
-  margin-bottom: 16px;
-}
-
-.modal-download {
-  display: block;
-  text-align: center;
-  background: var(--accent);
-  color: var(--bg);
-  border-radius: var(--radius);
-  padding: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  margin-bottom: 16px;
-}
-
-.modal-steps {
-  color: var(--muted);
-  font-size: 14px;
-  padding-left: 20px;
-  line-height: 1.7;
-}
-
-.modal-steps strong {
-  color: var(--text);
-}
-
-.modal-close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: transparent;
-  border: none;
-  color: var(--muted);
-  font-size: 26px;
-  line-height: 1;
-  cursor: pointer;
-  padding: 4px 10px;
+.apk-fab:active {
+  opacity: 0.7;
 }
