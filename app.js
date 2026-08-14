@@ -193,6 +193,12 @@
     }
   });
 
+  var dlIos = document.getElementById("dl-ios");
+  var iosHint = document.getElementById("ios-hint");
+  dlIos.addEventListener("click", function () {
+    iosHint.classList.toggle("hidden");
+  });
+
   document.getElementById("btn-share").addEventListener("click", function () {
     var output = document.getElementById("output-encrypt");
     var text = output.textContent;
