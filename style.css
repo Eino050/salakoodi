@@ -178,3 +178,17 @@ button:active {
   text-align: center;
   padding: 8px 16px calc(16px + env(safe-area-inset-bottom));
 }
+
+.apk-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.apk-link:active {
+  opacity: 0.7;
+}
